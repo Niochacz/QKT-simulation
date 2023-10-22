@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
 #Evolving function
 def evolve(theta, phi, p, k):
     x = np.sin(theta)*np.cos(phi)
@@ -15,6 +16,7 @@ def evolve(theta, phi, p, k):
     dphi = np.arctan2(dy,dx)
     return dtheta, dphi
 
+
 #Initial parameters
 steps = 100
 p0 = np.pi/2
@@ -24,17 +26,24 @@ Nphi = 60
 thetas = np.zeros((Ntheta, Nphi, steps))
 phis = np.zeros((Ntheta, Nphi, steps))
 
-#Main function
+
+#Initial start points
 for i in range(Ntheta):
     thetas[i,:,0] = [i*np.pi/Ntheta for p in range(Nphi)]
     for j in range(Nphi):
         phis[:,j,0] = [-np.pi + 2*j*np.pi/Nphi for p in range(Ntheta)]
+        
+
+#Main function      
+for i in range(Ntheta):   
+    for j in range(Nphi): 
         theta0 = thetas[i,j,0]
         phi0 = phis[i,j,0]
         for n in range(1, steps):
             theta0, phi0 = evolve(theta0, phi0, p0, k0)
             thetas[i,j,n] = theta0
             phis[i,j,n] = phi0
+
 
 #Creating plot
 phis = np.reshape(phis, (Ntheta*Nphi*steps))
