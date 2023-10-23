@@ -1,8 +1,12 @@
 # Quantum Kicked Top simulation on IBM classical computer
-In this folder is posted code responsible for collecting data about act of Quantum Kicked Top hamiltonian on 3 qubits computed on IBM classical computer.
+In this folder is posted code responsible for collecting data about act of Quantum Kicked Top hamiltonian on 3 qubits computed on IBM classical computer.  
+Program 'quantum_simulation.py' is similar to program 'quantum_computation.py', but is executed on classical computer simulating quantum computer. Therefore it is faster, but it is only mathematical idealisation.  
+Program 'quantum_simulation_with_noise.py' is basically the same as 'quantum_simulation.py', but is executed on classical computer simulating quantum computer with noise. It is not such mathematical ideal, but still far les noisy than truly quantum device.
 
 ## Setting backend
-In this program we will use 'qasm_simulator' backend. It is backend provided by IBM that simulate quantum computer on classical computer.
+In this program we will use 'qasm_simulator' backend. It is backend provided by IBM that simulate quantum computer on classical computer.  
+  
+For simulation with noise providing your token is necessery. User also must set, which quantum computer noise should program simulate.
 
 ## Evolving function
 This is implementation of classical evolution mainly based on this paper (Section III):   
