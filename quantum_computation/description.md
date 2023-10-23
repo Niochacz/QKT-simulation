@@ -3,7 +3,8 @@ In this folder is posted code responsible for collecting data about act of Quant
 
 ## Loading IBMQ account
 To use IMBQ computers you have to create your account. Every account has assigned token, which you should provide to use this code.
->https://qiskit.org/ecosystem/ibmq-provider/tutorials/1_the_ibmq_account.html
+>https://qiskit.org/ecosystem/ibmq-provider/tutorials/1_the_ibmq_account.html  
+
 Next you have to select backend, which you will be using.
 
 ## Evolving function
@@ -41,14 +42,14 @@ There are 2 parameters:
 ## Circuit creation
 
 ### Setting qubit and bit number
-Almost last parameter to set in our experiments is number of qubits. 
+Almost last parameter to set in our experiments is number of qubits.
 It depends on what are you trying to measure or simulate.
 In our experiment that number is set to 3 and hamiltonian implementation is also built for 3 qubits.
 Be aware also that you have to obey IBMQ computers architecture.
 
 ### Creating hamiltonian implementation
-Next there is implemented QKT Hamiltonian for 3 qubits as sub-circuit.  
-First, hamiltonian parameter and such object as circuit is declared.  
+Next there is implemented QKT Hamiltonian for 3 qubits as sub-circuit.
+First, hamiltonian parameter and such object as circuit is declared.
 Then to declared circuit gates are being attached. Such circuit has explicit action as QKT Hamiltonian.
 
 ### Main circuit creation  
@@ -60,7 +61,7 @@ Then for each pixel on plot there is creating a circuit, which consist of:
 - measurement
 
 ## Circuit execution
-In this section circuits are uploaded to queue in IBMQ servers. Once they are executed number of counts (successful shots) for each circuit is being retrieved into a matrix and normalised to be treated as probability. In the end the outcome data matrix is saved to .txt file.
+In this section circuits are uploaded to queue in IBMQ servers. Once they are executed number of counts (successful shots) for each circuit is being retrieved into a matrix and normalised to be treated as probability. In the end the outcome data matrix is saved to .txt file.  
 (LastJob is out of loop, becouse of some sort of bug, so the last iteration is done manually)
 
 ## Plot creation
