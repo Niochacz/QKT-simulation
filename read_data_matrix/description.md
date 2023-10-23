@@ -27,6 +27,7 @@ Parameters describing computation, which lead to given data matrix. Those are ma
 - N_Hlist - list of numbers of applied hamiltonians (applied sub-circuits)
 - alphas - list of hamiltonian parameter
 - thetalist2, philist2 - starting position of points
+  
 Those are all list, so program is capable of reading more than one file in one run.
 
 ### Coherence
